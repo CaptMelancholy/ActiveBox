@@ -1,0 +1,328 @@
+@import "https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap";
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+a,
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.nav-list__el > a:hover:after {
+  content: "";
+  background-color: #babbc5;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.nav-list__el > a:active:after {
+  content: "";
+  background-color: #e71414;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.download .button__download,
+.banner .button-link {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #ff4343;
+  width: 370px;
+  margin: 0 auto;
+  padding: 26px 0;
+  font-size: 24px;
+  font-weight: 900;
+  transition: all 0.3s;
+  display: block;
+}
+.download .button__download:hover,
+.banner .button-link:hover {
+  background-color: #e71414;
+}
+.download .button__download:active,
+.banner .button-link:active {
+  background-color: #ff4343;
+  box-shadow: 4px 4px 30px #ff4343;
+}
+.features .features-content .feature__el .title {
+  color: #2d3033;
+  padding: 22px 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+.work .work__el .work__info {
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s, visibility 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.work .work__el:after {
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.work .work__el:hover:after {
+  background-color: #ff4343cc;
+}
+.work .work__el:active:after {
+  background-color: #b90c0ccc;
+}
+.header .header-content {
+  border-bottom: 1px solid #babbc5;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.header .header-content .logo {
+  height: 100%;
+  display: block;
+}
+.nav-list {
+  flex-direction: row;
+  display: flex;
+}
+.nav-list__el {
+  text-align: center;
+  width: 134px;
+  position: relative;
+}
+.nav-list__el a {
+  color: #fff;
+  padding: 42px 0;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.5s;
+  display: block;
+}
+.nav-list__el a:after {
+  transition: all 0.5s;
+}
+.nav-list__el > a:active {
+  color: #e71414;
+}
+.banner {
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.banner .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 900;
+}
+.banner .discription {
+  color: #fff;
+  margin-top: 31px;
+  font-size: 24px;
+}
+.banner .button-link {
+  margin-top: 79px;
+}
+.download {
+  background-color: #fff;
+  padding: 114px 0;
+}
+.download .title {
+  text-align: center;
+  color: #000;
+  padding: 35px/2 0;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.download .discription {
+  text-align: center;
+  color: #000;
+  margin-bottom: 47px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.features {
+  background-color: #fff;
+  padding: 116px 0;
+}
+.features .features-content {
+  text-align: center;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 81px 31px;
+  display: grid;
+}
+.features .features-content .feature__el .logo {
+  justify-content: center;
+  margin-bottom: 29px;
+  display: flex;
+}
+.features .features-content .feature__el .title {
+  margin-bottom: 20px;
+}
+.features .features-content .feature__el .discription {
+  color: #6c7279;
+  font-size: 18px;
+}
+.footer .footer__upper {
+  background-color: #353c65;
+  padding: 71px 0;
+}
+.footer .footer__upper .footer__info {
+  text-align: center;
+  grid-template-columns: repeat(auto-fill, 370px);
+  gap: 30px;
+  display: grid;
+}
+.footer .footer__upper .footer__info .title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.footer .footer__upper .footer__info .discription {
+  color: #fff;
+  margin-top: 29px;
+  font-size: 18px;
+}
+.footer .footer__upper .footer__info .share__links {
+  flex-direction: row;
+  justify-content: center;
+  gap: 27px;
+  margin-top: 48px;
+  display: flex;
+}
+.footer .footer__lower {
+  text-align: center;
+  background-color: #2c3154;
+  padding: 24px 0;
+}
+.footer .footer__lower .discription {
+  color: gray;
+  width: 370px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.footer .footer__lower .discription mark {
+  color: #fff;
+  background: 0 0;
+}
+.ourteam {
+  background-color: #fff;
+  padding: 114px 0;
+}
+.ourteam .ourteam-content {
+  grid-template-columns: repeat(auto-fill, 270px);
+  gap: 0 30px;
+  display: grid;
+}
+.ourteam .ourteam-content .ourteam-content__el .staff__photo {
+  object-fit: cover;
+}
+.ourteam .ourteam-content .ourteam-content__el .staff__name {
+  color: #2d3033;
+  font-weight: 700px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.ourteam .ourteam-content .ourteam-content__el .staff__position {
+  text-transform: uppercase;
+  color: #ff4343;
+  margin-bottom: 17px;
+  font-size: 18px;
+}
+.ourteam .ourteam-content .ourteam-content__el .staff__bio {
+  color: #6c7279;
+  margin-bottom: 38px;
+  font-size: 18px;
+}
+.ourteam .ourteam-content .ourteam-content__el .staff__urls {
+  flex-direction: row;
+  gap: 6px;
+  display: flex;
+}
+.work {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  display: grid;
+}
+.work .work__el {
+  border: 1px solid #fff;
+  position: relative;
+}
+.work .work__el .work__photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.work .work__el .work__info .work__title {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 16px 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+.work .work__el .work__info .work__discription {
+  color: #fff;
+  font-size: 18px;
+}
+.work .work__el:after {
+  transition: all 0.3s;
+}
+.work .work__el:hover > .work__info {
+  visibility: visible;
+  opacity: 1;
+}
+.main {
+  background: linear-gradient(#252b49cc, #252b49cc),
+    url(img.4fce87fa.png) 50% / cover fixed;
+}
