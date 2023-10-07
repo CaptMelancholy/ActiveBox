@@ -1,0 +1,48 @@
+.work {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: stretch;
+  .work__el {
+    position: relative;
+    border: 1px solid $text_color_white;
+    .work__photo {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .work__info {
+      @extend %work_text;
+      .work__title {
+        font-size: $h4;
+        color: $text_color_white;
+        margin-bottom: 20px;
+        font-weight: 900;
+        padding: 16px 0;
+        text-transform: uppercase;
+      }
+      .work__discription {
+        font-size: $p;
+        color: $text_color_white;
+      }
+    }
+  }
+
+  .work__el::after {
+    @extend %work_mask;
+    transition: 0.3s;
+  }
+
+  .work__el:hover > .work__info {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .work__el:hover::after {
+    @extend %work_hover;
+  }
+
+  .work__el:active::after {
+    @extend %work_active;
+  }
+}

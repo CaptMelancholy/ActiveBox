@@ -1,0 +1,37 @@
+.ourteam {
+  background-color: $background_color;
+  padding: 114px 0;
+  .ourteam-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 0 30px;
+    .ourteam-content__el {
+      .staff__photo {
+        object-fit: cover;
+      }
+      .staff__name {
+        margin-top: 30px;
+        margin-bottom: 5px;
+        color: $text_color_black;
+        font-weight: 700px;
+        font-size: $h4;
+      }
+      .staff__position {
+        text-transform: uppercase;
+        color: $position_red_color;
+        margin-bottom: 17px;
+        font-size: $p;
+      }
+      .staff__bio {
+        font-size: $p;
+        color: $text_color_gray;
+        margin-bottom: 38px;
+      }
+      .staff__urls {
+        display: flex;
+        gap: 6px;
+        flex-direction: row;
+      }
+    }
+  }
+}

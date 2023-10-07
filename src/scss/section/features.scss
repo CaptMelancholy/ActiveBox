@@ -1,0 +1,27 @@
+.features {
+  background-color: $background_color;
+  padding: 116px 0;
+  .features-content {
+    display: grid;
+    gap: 81px 31px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    text-align: center;
+    .feature__el {
+      .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 29px;
+      }
+      .title {
+        margin-bottom: 20px;
+        @extend %title_feature;
+      }
+      .discription {
+        color: $text_color_gray;
+        font-size: $p;
+      }
+    }
+  }
+}

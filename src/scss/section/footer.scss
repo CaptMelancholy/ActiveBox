@@ -1,0 +1,44 @@
+.footer {
+  .footer__upper {
+    background-color: $footer_info_bg_color;
+    padding: 71px 0;
+    .footer__info {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fill, 370px);
+      text-align: center;
+      .title {
+        color: $text_color_white;
+        font-size: $h5;
+        font-weight: 700;
+      }
+      .discription {
+        font-size: $p;
+        margin-top: 29px;
+        color: $text_color_white;
+      }
+      .share__links {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 27px;
+      }
+    }
+  }
+  .footer__lower {
+    background-color: $footer_copyright_bg_color;
+    padding: 24px 0;
+    text-align: center;
+    .discription {
+      color: $footer_copyright_color;
+      font-size: $p;
+      width: 370px;
+      margin: 0 auto;
+      mark {
+        background: none;
+        color: $footer_copyright-mark_color;
+      }
+    }
+  }
+}

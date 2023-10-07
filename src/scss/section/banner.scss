@@ -1,0 +1,30 @@
+.banner {
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 120px;
+  .title {
+    font-size: $h1;
+    font-weight: 900;
+    color: $text_color_white;
+    text-transform: uppercase;
+  }
+
+  .discription {
+    margin-top: 31px;
+    font-size: $p_v2;
+    color: $text_color_white;
+  }
+
+  .button-link {
+    margin-top: 79px;
+    @extend %btn;
+  }
+
+  .button-link:hover {
+    @extend %btn_hover;
+  }
+
+  .button-link:active {
+    @extend %btn_active;
+  }
+}

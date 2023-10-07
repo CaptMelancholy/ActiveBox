@@ -1,0 +1,35 @@
+{
+  "name": "activebox",
+  "version": "0.9.1",
+  "description": "Training project for TeachMeSkills",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "predeploy": "npm run build",
+    "pro": "parcel build src/index.html --no-source-maps --no-cache --public-url .",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaptMelancholy/ActiveBox.git"
+  },
+  "keywords": [
+    "parcel",
+    "sass",
+    "scss",
+    "bootstrap"
+  ],
+  "author": "Artyom D.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaptMelancholy/ActiveBox/issues"
+  },
+  "homepage": "https://github.com/CaptMelancholy/ActiveBox#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "gh-pages": "^6.0.0",
+    "parcel": "^2.9.3"
+  }
+}

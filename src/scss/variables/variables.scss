@@ -1,0 +1,41 @@
+/* colors */
+
+$work_hover_color: rgba(255, 67, 67, 0.8);
+$work_active_color: rgba(185, 12, 12, 0.8);
+$btn_bg_color: #ff4343;
+$btn_bg_hover_color: #e71414;
+$btn_bg_active_color: #ff4343;
+
+$main_background_color: rgba(37, 43, 73, 0.8);
+$main_background: url(../../img/img.png), lightgray 50% / cover no-repeat;
+
+$nav_after_hover_color: #babbc5;
+$nav_after_active_color: #e71414;
+$nav_text_active_color: #e71414;
+$position_red_color: #ff4343;
+$footer_copyright_color: #808080;
+$footer_copyright-mark_color: #fff;
+$footer_info_bg_color: #353c65;
+$footer_copyright_bg_color: #2c3154;
+
+$text_color_white: #fff;
+$text_color_black: #2d3033;
+$text_color_gray: #6c7279;
+
+$background_color: #fff !default;
+$slider_elements_bg_color: #5c3249;
+
+/* shadows */
+
+$btn_bg_active_shadow: 4px 4px 30px 0px #ff4343;
+
+/* font-sizes */
+
+$h1: 64px;
+$h2: 36px;
+$h3: 30px;
+$h4: 24px;
+$h5: 18px;
+$p: 18px;
+$p_v2: 24px;
+$nav_points: 13px;
