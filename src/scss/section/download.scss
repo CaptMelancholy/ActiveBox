@@ -28,3 +28,33 @@
     @extend %btn_active;
   }
 }
+
+@media (max-width: 1200px) {
+  .download {
+    padding: 78px 0;
+    .title {
+      font-size: $h3_tablet;
+      padding: 16px 0;
+      margin-bottom: 5px;
+    }
+    .discription {
+      font-size: $p_tablet;
+      margin-bottom: 43px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .download {
+    padding: 78px 0;
+    .title {
+      font-size: $h3_phone;
+      padding: 30px 0;
+      margin-bottom: 3px;
+    }
+    .discription {
+      font-size: $p_phone;
+      margin-bottom: 11px;
+    }
+  }
+}

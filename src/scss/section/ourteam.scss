@@ -3,11 +3,16 @@
   padding: 114px 0;
   .ourteam-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 270px);
-    gap: 0 30px;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 50px 30px;
     .ourteam-content__el {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
       .staff__photo {
-        object-fit: cover;
+        object-fit: contain;
       }
       .staff__name {
         margin-top: 30px;
@@ -31,6 +36,76 @@
         display: flex;
         gap: 6px;
         flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .ourteam {
+    padding: 78px 0;
+    .ourteam-content {
+      gap: 50px 25px;
+      .ourteam-content__el {
+        .staff__photo {
+          object-fit: contain;
+        }
+        .staff__name {
+          margin-top: 25px;
+          margin-bottom: 4px;
+          font-size: $h4_tablet;
+        }
+        .staff__position {
+          margin-bottom: 22px;
+          font-size: $p_tablet;
+        }
+        .staff__bio {
+          font-size: $p_tablet;
+          margin-bottom: 39px;
+        }
+        .staff__urls {
+          gap: 5px;
+          a > svg {
+            width: 33px;
+            height: 33px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .ourteam {
+    padding: 35px 0;
+    .ourteam-content {
+      grid-template-columns: repeat(auto-fit, minmax(49%, auto));
+      gap: 50px 10px;
+      .ourteam-content__el {
+        .staff__photo {
+          object-fit: cover;
+          height: 80%;
+        }
+        .staff__name {
+          margin-top: 25px;
+          margin-bottom: 4px;
+          font-size: $h4_phone;
+        }
+        .staff__position {
+          margin-bottom: 38px;
+          font-size: $p_phone;
+        }
+        .staff__bio {
+          font-size: $p_phone;
+          margin-bottom: 55px;
+        }
+        .staff__urls {
+          gap: 5px;
+          a > svg {
+            width: 39px;
+            height: 39px;
+          }
+        }
       }
     }
   }

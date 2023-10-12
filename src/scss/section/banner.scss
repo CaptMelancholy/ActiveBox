@@ -2,7 +2,9 @@
   text-align: center;
   padding-top: 130px;
   padding-bottom: 120px;
+
   .title {
+    position: relative;
     font-size: $h1;
     font-weight: 900;
     color: $text_color_white;
@@ -26,5 +28,43 @@
 
   .button-link:active {
     @extend %btn_active;
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner {
+    padding-top: 158px;
+    padding-bottom: 126px;
+    .title {
+      font-size: $h1_tablet;
+    }
+
+    .discription {
+      margin-top: 61px;
+      font-size: $p_v2_tablet;
+    }
+
+    .button-link {
+      margin-top: 89px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner {
+    padding-top: 49px;
+    padding-bottom: 52px;
+    .title {
+      font-size: $h1_phone;
+    }
+
+    .discription {
+      margin-top: 32px;
+      font-size: $p_v2_phone;
+    }
+
+    .button-link {
+      margin-top: 49px;
+    }
   }
 }

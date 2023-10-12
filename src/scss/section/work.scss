@@ -1,14 +1,12 @@
 .work {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25%, auto));
   align-items: stretch;
   .work__el {
     position: relative;
     border: 1px solid $text_color_white;
     .work__photo {
       object-fit: cover;
-      height: 100%;
       width: 100%;
     }
     .work__info {
@@ -44,5 +42,43 @@
 
   .work__el:active::after {
     @extend %work_active;
+  }
+}
+
+@media (max-width: 1200px) {
+  .work {
+    grid-template-columns: repeat(auto-fit, minmax(25%, auto));
+    .work__el {
+      .work__info {
+        @extend %work_text;
+        .work__title {
+          font-size: $h4_tablet;
+          margin-bottom: 12px;
+          padding: 10px 0;
+        }
+        .work__discription {
+          font-size: $p_tablet;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .work {
+    grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+    .work__el {
+      .work__info {
+        .work__title {
+          font-size: $h4_phone;
+          width: auto;
+          margin-bottom: 4px;
+          padding: 2px 0;
+        }
+        .work__discription {
+          font-size: $p_phone;
+        }
+      }
+    }
   }
 }

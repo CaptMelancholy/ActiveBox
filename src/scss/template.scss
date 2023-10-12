@@ -38,6 +38,20 @@
   transition: 0.3s;
 }
 
+@media (max-width: 1200px) {
+  %btn {
+    width: 314px;
+    padding: 26px 0;
+  }
+}
+
+@media (max-width: 780px) {
+  %btn {
+    width: 279px;
+    padding: 16px 0;
+  }
+}
+
 %btn_hover {
   background-color: $btn_bg_hover_color;
 }
@@ -54,6 +68,20 @@
   font-weight: 900;
 }
 
+@media (max-width: 1200px) {
+  %title_feature {
+    font-size: $h4_tablet;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 780px) {
+  %title_feature {
+    font-size: $h4_phone;
+    padding: 12px 0;
+  }
+}
+
 %work_text {
   position: absolute;
   top: 50%;
@@ -64,6 +92,14 @@
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 2;
+}
+
+@media (max-width: 780px) {
+  %work_text {
+    left: 0%;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
 }
 
 %work_mask {

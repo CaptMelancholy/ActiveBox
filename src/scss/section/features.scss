@@ -3,9 +3,8 @@
   padding: 116px 0;
   .features-content {
     display: grid;
-    gap: 81px 31px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    gap: 80px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(30%, auto));
     justify-items: center;
     text-align: center;
     .feature__el {
@@ -21,6 +20,48 @@
       .discription {
         color: $text_color_gray;
         font-size: $p;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .features {
+    padding: 78px 0;
+    .features-content {
+      gap: 50px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(30%, auto));
+      .feature__el {
+        .logo {
+          margin-bottom: 23px;
+        }
+        .title {
+          margin-bottom: 4px;
+        }
+        .discription {
+          font-size: $p_tablet;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .features {
+    padding: 40px 0;
+    .features-content {
+      gap: 41px 0px;
+      grid-template-columns: repeat(auto-fit, 100%);
+      .feature__el {
+        .logo {
+          margin-bottom: 20px;
+        }
+        .title {
+          margin-bottom: 0;
+        }
+        .discription {
+          font-size: $p_phone;
+        }
       }
     }
   }

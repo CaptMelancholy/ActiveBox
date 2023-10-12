@@ -1,9 +1,13 @@
 .header {
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 100;
   .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $nav_after_hover_color;
+
     flex-wrap: wrap;
     .logo {
       display: block;
@@ -15,6 +19,16 @@
 .nav-list {
   display: flex;
   flex-direction: row;
+}
+
+#nav__toggle {
+  position: absolute;
+  visibility: hidden;
+  left: -999em;
+}
+
+.nav__btn {
+  display: none;
 }
 
 .nav-list__el {
@@ -44,4 +58,26 @@
 
 .nav-list__el > a:active::after {
   @extend %line_nav_active;
+}
+
+@media (max-width: 1200px) {
+  .nav-list__el {
+    max-width: 112px;
+    a {
+      padding: 43px 0;
+      font-size: $nav_points_tablet;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .header {
+    .header-content {
+      border-bottom: none;
+    }
+  }
+
+  .nav-list {
+    display: none;
+  }
 }

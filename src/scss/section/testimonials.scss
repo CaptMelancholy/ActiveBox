@@ -1,0 +1,140 @@
+.testimonials {
+  background: $background_color;
+  #carouselExampleIndicators {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+  }
+
+  .carousel-indicators {
+    position: static;
+    margin-top: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    button {
+      border-radius: 50%;
+      border: 1px solid $slider_elements_bg_color;
+      width: 14px;
+      height: 14px;
+    }
+
+    button.active {
+      background: $slider_elements_bg_color;
+    }
+  }
+
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: stretch;
+    .carousel__img {
+      img {
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .carousel__info {
+      background-color: #5c3249;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 129px 0 170px;
+      h2 {
+        font-size: $h2;
+        color: $text_color_white;
+        font-family: "Cardo", serif;
+        font-weight: 400;
+        font-style: italic;
+        padding: 13px 0;
+      }
+      p {
+        font-weight: 700;
+        font-size: 12px;
+        color: $text_color_white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .testimonials {
+    .carousel-indicators {
+      margin-top: 24px;
+      gap: 25px;
+
+      button {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+      grid-template-columns: repeat(2, 1fr);
+      .carousel__img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .carousel__info {
+        padding: 47px 88px 110px 104px;
+        justify-content: none;
+        h2 {
+          font-size: $h2_tablet;
+          padding: 12px 0;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .testimonials {
+    .carousel-indicators {
+      margin-top: 23px;
+      gap: 20px;
+
+      button {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+      grid-template-columns: repeat(1, 1fr);
+      .carousel__img {
+        img {
+          height: 212px;
+        }
+      }
+
+      .carousel__info {
+        text-align: center;
+        padding: 0 20px 95px 25px;
+        justify-content: none;
+        h2 {
+          font-size: $h2_phone;
+          padding: 12px 0;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
