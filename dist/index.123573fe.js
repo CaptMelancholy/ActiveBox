@@ -1,0 +1,1 @@
+$(window).scroll(()=>{let e=$(window).scrollTop(),o=document.querySelector(".header-content");e>=o.offsetHeight?o.classList.remove("border"):o.classList.add("border")});

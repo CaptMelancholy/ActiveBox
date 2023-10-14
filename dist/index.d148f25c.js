@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".burger"),t=document.querySelector(".nav");document.querySelector(".nav-list__el__link"),console.log(t.classList.contains("show")),e.addEventListener("click",()=>{t.classList.toggle("show")})});
