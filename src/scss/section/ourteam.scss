@@ -36,6 +36,9 @@
         display: flex;
         gap: 6px;
         flex-direction: row;
+        svg {
+          transition: all 1s ease-in-out;
+        }
       }
     }
   }

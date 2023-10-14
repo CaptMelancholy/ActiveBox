@@ -6,7 +6,8 @@
     position: relative;
     border: 1px solid $text_color_white;
     .work__photo {
-      object-fit: cover;
+      object-fit: fill;
+      height: 100%;
       width: 100%;
     }
     .work__info {
@@ -28,7 +29,8 @@
 
   .work__el::after {
     @extend %work_mask;
-    transition: 0.3s;
+    clip-path: circle(0% at 50%);
+    transition: 1s ease-in-out;
   }
 
   .work__el:hover > .work__info {
@@ -37,11 +39,14 @@
   }
 
   .work__el:hover::after {
-    @extend %work_hover;
+    // @extend %work_hover;
+    clip-path: circle(120% at 50%);
+    background-color: $work_hover_color;
   }
 
   .work__el:active::after {
-    @extend %work_active;
+    clip-path: circle(120% at 50%);
+    background-color: $work_active_color;
   }
 }
 

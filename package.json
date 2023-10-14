@@ -1,6 +1,6 @@
 {
   "name": "activebox",
-  "version": "0.9.1",
+  "version": "1.0.2",
   "description": "Training project for TeachMeSkills",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",

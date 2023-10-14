@@ -3,6 +3,7 @@
   top: 0;
   background: inherit;
   z-index: 100;
+
   .header-content {
     display: flex;
     justify-content: space-between;
@@ -16,19 +17,51 @@
   }
 }
 
+.header-content.border {
+  border: 0px solid transparent !important;
+  border-bottom: 1px solid $nav_after_hover_color !important;
+}
+
+@media (max-width: 780px) {
+  .header-content.border {
+    border: 0px solid transparent !important;
+    border-bottom: 0px solid transparent !important;
+  }
+}
+
 .nav-list {
   display: flex;
   flex-direction: row;
 }
 
-#nav__toggle {
-  position: absolute;
-  visibility: hidden;
-  left: -999em;
+.burger {
+  display: none;
+  cursor: pointer;
+  padding: 19px 0;
 }
 
-.nav__btn {
-  display: none;
+.line {
+  height: 2px;
+  width: 24px;
+  background-color: white;
+  transition: transform 0.75s ease, opacity 0.75s ease;
+}
+
+.line2 {
+  margin: 4px 0;
+}
+
+.nav.show .line1 {
+  transform: translate(-12px) rotate(45deg) translate(9px);
+}
+.nav.show .line2 {
+  opacity: 0;
+}
+.nav.show .line3 {
+  transform: translate(-12px) rotate(-45deg) translate(9px);
+}
+.nav.show .nav-list {
+  transform: translateX(0%);
 }
 
 .nav-list__el {
@@ -44,7 +77,8 @@
     transition: 0.5s;
   }
   a:after {
-    transition: 0.5s;
+    @extend %line_nav;
+    transition: 1s ease-in-out;
   }
 }
 
@@ -74,10 +108,43 @@
   .header {
     .header-content {
       border-bottom: none;
+      .logo {
+        width: 103px;
+        z-index: 10;
+      }
     }
   }
 
+  .burger {
+    display: block;
+  }
   .nav-list {
-    display: none;
+    position: absolute;
+    text-align: left;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    background: linear-gradient($main_background_color, $main_background_color),
+      url(./img/img.png) fixed center/cover;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    .nav-list__el:first-child {
+      margin-top: 84px;
+    }
+    .nav-list__el {
+      width: 100%;
+      padding: 0 20px;
+      a {
+        text-align: left;
+        padding: 25px 0;
+        font-size: $nav_points_phone;
+      }
+    }
+
+    .nav-list__el > a:hover::after {
+      display: none;
+    }
   }
 }

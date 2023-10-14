@@ -1,15 +1,23 @@
 @import "variables/variables.scss";
 
+%line_nav {
+  position: absolute;
+  display: flex;
+  content: "";
+  top: 98%;
+  height: 3px;
+  background-color: $nav_after_hover_color;
+  width: 0%;
+}
+
 %line_nav_hover {
   position: absolute;
   display: flex;
   content: "";
   top: 98%;
-  left: 50%;
   height: 3px;
   background-color: $nav_after_hover_color;
   width: 100%;
-  transform: translate(-50%);
 }
 
 %line_nav_active {

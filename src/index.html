@@ -58,23 +58,59 @@
               </svg>
             </a>
             <nav class="nav">
-              <input id="nav__toggle" type="checkbox" />
-              <label class="nav__btn" for="nav__toggle">
-                <span></span>
-              </label>
               <ul class="nav-list">
-                <li class="nav-list__el"><a href="#">FEATURES</a></li>
-                <li class="nav-list__el"><a href="#">WORKS</a></li>
-                <li class="nav-list__el"><a href="#">OUR TEAM</a></li>
-                <li class="nav-list__el"><a href="#">TESTIMONIALS</a></li>
-                <li class="nav-list__el"><a href="#">DOWNLOAD</a></li>
+                <li class="nav-list__el">
+                  <a
+                    href="#features"
+                    class=".nav-list__el__link"
+                    onclick="clickURL()"
+                    >FEATURES</a
+                  >
+                </li>
+                <li class="nav-list__el">
+                  <a
+                    href="#work"
+                    class=".nav-list__el__link"
+                    onclick="clickURL()"
+                    >WORKS</a
+                  >
+                </li>
+                <li class="nav-list__el">
+                  <a
+                    href="#ourteam"
+                    class=".nav-list__el__link"
+                    onclick="clickURL()"
+                    >OUR TEAM</a
+                  >
+                </li>
+                <li class="nav-list__el">
+                  <a
+                    href="#testimonials"
+                    class=".nav-list__el__link"
+                    onclick="clickURL()"
+                    >TESTIMONIALS</a
+                  >
+                </li>
+                <li class="nav-list__el">
+                  <a
+                    href="#download"
+                    class=".nav-list__el__link"
+                    onclick="clickURL()"
+                    >DOWNLOAD</a
+                  >
+                </li>
               </ul>
+              <div class="burger">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
             </nav>
           </div>
         </div>
       </header>
       <section class="section">
-        <div class="banner">
+        <div class="banner" id="banner">
           <div class="wrapper">
             <h1 class="title">Your Favorite One PageMulti Purpose Template</h1>
             <p class="discription">
@@ -84,7 +120,7 @@
             <a href="#" class="button-link"> Find out more </a>
           </div>
         </div>
-        <div class="features">
+        <div class="features" id="features">
           <div class="wrapper">
             <div class="features-content">
               <div class="feature__el">
@@ -282,7 +318,7 @@
             </div>
           </div>
         </div>
-        <div class="work">
+        <div class="work" id="work">
           <a href="#" class="work__el">
             <img src="scss/img/work_1.png" alt="error" class="work__photo" />
             <div class="work__info">
@@ -340,7 +376,7 @@
             </div>
           </a>
         </div>
-        <div class="ourteam">
+        <div class="ourteam" id="ourteam">
           <div class="wrapper">
             <div class="ourteam-content">
               <div class="ourteam-content__el">
@@ -662,7 +698,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonials">
+        <div class="testimonials" id="testimonials">
           <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -766,7 +802,7 @@
             </div>
           </div>
         </div>
-        <div class="download">
+        <div class="download" id="download">
           <div class="wrapper">
             <h3 class="title">
               Are You Ready to Start? Download Now For Free!
@@ -874,10 +910,13 @@
         </div>
       </div>
     </footer>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/scroll.js"></script>
   </body>
 </html>
